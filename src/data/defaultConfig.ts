@@ -2,8 +2,8 @@ import type { SiteConfig } from '../types';
 
 export const defaultConfig: SiteConfig = {
   name: 'michael poniente',                          
-  title: 'computer engineering @ uci',      
-  bio: 'i build real stuff with real impact',
+  title: 'computer engineering @ uci • pursuing a software engineering career',      
+  bio: 'just a child at heart trying to make their dreams come true',
   location: 'bay area',                      
   email: 'michaelwrites.biz@gmail.com',
   links: {
