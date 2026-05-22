@@ -5,11 +5,9 @@ import { supabase } from '../lib/supabase';
 
 const AUTH_KEY = 'portfolio_auth';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// IMPORTANT: Change this to your real password, then commit and redeploy.
-// This is the single source-of-truth password for ALL devices / visitors.
-// ─────────────────────────────────────────────────────────────────────────────
-const CMS_PASSWORD = 'writer2024';
+// Password comes from your .env file (VITE_CMS_PASSWORD) — never hardcoded.
+// Add it to Vercel under Settings → Environment Variables too.
+const CMS_PASSWORD = import.meta.env.VITE_CMS_PASSWORD as string | undefined;
 
 interface CMSContextType {
   posts: WritingPost[];
@@ -101,6 +99,10 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   // ── Auth ───────────────────────────────────────────────────────
   const login = useCallback((password: string): boolean => {
+    if (!CMS_PASSWORD) {
+      console.error('VITE_CMS_PASSWORD is not set in your .env file.');
+      return false;
+    }
     if (password === CMS_PASSWORD) {
       setIsAuthenticated(true);
       sessionStorage.setItem(AUTH_KEY, 'true');

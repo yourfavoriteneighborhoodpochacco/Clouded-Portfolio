@@ -194,8 +194,8 @@ const SettingsPanel = ({ onClose }: { onClose: () => void }) => (
               <span className="text-ink/30 ml-2">— name, bio, links</span>
             </p>
             <p className="font-mono text-xs bg-cream border border-dust/50 rounded px-3 py-2 text-ink/70">
-              src/context/CMSContext.tsx
-              <span className="text-ink/30 ml-2">— CMS_PASSWORD on line ~14</span>
+              .env / Vercel env vars
+              <span className="text-ink/30 ml-2">— VITE_CMS_PASSWORD</span>
             </p>
           </div>
         </div>
