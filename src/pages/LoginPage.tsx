@@ -70,11 +70,6 @@ export const LoginPage = () => {
             {loading ? 'entering...' : 'enter →'}
           </button>
         </form>
-
-        <p className="font-mono text-xs text-ink/20 text-center mt-8">
-          Default password: <span className="text-ink/40">writer2024</span>
-          <br />Change it in the CMS settings after login.
-        </p>
       </div>
     </div>
   );

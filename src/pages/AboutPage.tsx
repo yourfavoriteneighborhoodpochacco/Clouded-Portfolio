@@ -10,17 +10,12 @@ const SKILLS = {
   'Dev Tools':    ['Git', 'Docker', 'Vercel', 'AWS', 'CI/CD'],
 };
 
-// ── Resume — replace with your actual resume URL ───────────────────
-// Options:
-//   • Google Drive share link (set to "anyone with link can view")
-//   • Direct PDF URL (e.g. hosted in /public/resume.pdf)
-//   • Any public URL
-const RESUME_URL = '/resume.pdf'; // Put your resume.pdf in the /public folder, or replace with a URL
+const RESUME_URL = 'https://drive.google.com/file/d/1npx9e59oGqEffPnuhHeU_qWxEeMbMDIM/preview';
 
-const CURRENTLY_READING = [
-  { title: 'The Pragmatic Programmer', author: 'Hunt & Thomas' },
-  { title: 'Thinking, Fast and Slow', author: 'Daniel Kahneman' },
-  { title: 'The Years', author: 'Annie Ernaux' },
+const TV_SERIES = [
+  { title: 'In Your Radiant Season', author: 'K-DRAMA' },
+  { title: 'Best Thing', author: 'C-DRAMA' },
+  { title: 'Perfect Crown', author: 'K-DRAMA' },
 ];
 
 export const AboutPage = () => {
@@ -58,10 +53,10 @@ export const AboutPage = () => {
 
             <div className="space-y-4 font-body text-ink/70 leading-relaxed">
               <p>
-                I'm drawn to the intersection of software and real-world impact — building tools that are fast, thoughtful, and actually useful. I care about clean architecture as much as I care about the user on the other end.
+                i'm truly passionate about product development and i'm focused on ensuring that the products i develop are designed by humans, for humans.
               </p>
               <p>
-                Outside of building things, I read a lot, think too much about system design, and occasionally convince myself that learning a new programming language is a good use of a Saturday.
+                outside of design and dev, i'm a huge book nerd, play tennis, and occasionally crash out over railway deployment for my passion projects MOMENTO and ATELIER.
               </p>
             </div>
           </div>
@@ -144,10 +139,6 @@ export const AboutPage = () => {
               </div>
             ))}
           </div>
-
-          <p className="font-mono text-xs text-ink/30 mt-4">
-            * Edit the <code className="bg-paper px-1 rounded">SKILLS</code> object in <code className="bg-paper px-1 rounded">src/pages/AboutPage.tsx</code> to update this list.
-          </p>
         </div>
 
         {/* ── Resume ─────────────────────────────────────────────── */}
@@ -181,31 +172,23 @@ export const AboutPage = () => {
               <FileText size={32} className="text-ink/20 mb-3" />
             </div>
           </div>
-
-          <p className="font-mono text-xs text-ink/30 mt-3">
-            * Place your resume PDF at <code className="bg-paper px-1 rounded">public/resume.pdf</code>, or update <code className="bg-paper px-1 rounded">RESUME_URL</code> in <code className="bg-paper px-1 rounded">src/pages/AboutPage.tsx</code> to point to any URL.
-          </p>
         </div>
 
         {/* ── Currently Reading ───────────────────────────────────── */}
         <div className="border-t border-dust/40 pt-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px bg-dust" />
-            <h2 className="font-mono text-xs uppercase tracking-widest text-ink/40">Currently Reading</h2>
+            <h2 className="font-mono text-xs uppercase tracking-widest text-ink/40">c-drama and & k-drama recs</h2>
           </div>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {CURRENTLY_READING.map(book => (
+            {TV_SERIES.map(book => (
               <div key={book.title} className="p-4 bg-paper/40 border border-dust/30 rounded-sm">
                 <p className="font-display text-sm text-ink leading-snug">{book.title}</p>
                 <p className="font-mono text-xs text-ink/40 mt-1">{book.author}</p>
               </div>
             ))}
           </div>
-
-          <p className="font-mono text-xs text-ink/30 mt-4">
-            * Edit the <code className="bg-paper px-1 rounded">CURRENTLY_READING</code> array in <code className="bg-paper px-1 rounded">src/pages/AboutPage.tsx</code> to update this.
-          </p>
         </div>
 
       </div>
