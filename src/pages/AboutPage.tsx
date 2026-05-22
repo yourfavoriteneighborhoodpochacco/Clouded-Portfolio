@@ -2,13 +2,12 @@ import { useRef } from 'react';
 import { useCMS } from '../context/CMSContext';
 import { FileText, ExternalLink } from 'lucide-react';
 
-// ── Skills data — edit these directly ──────────────────────────────
 const SKILLS = {
-  Languages:      ['Python', 'TypeScript', 'JavaScript', 'Java', 'C++', 'SQL'],
+  Languages:      ['Python', 'TypeScript', 'SQL'],
   Frontend:       ['React', 'Next.js', 'TailwindCSS', 'HTML/CSS', 'Vite', 'Figma'],
-  Backend:        ['Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'Redis', 'REST APIs'],
-  'AI / ML':      ['PyTorch', 'scikit-learn', 'Hugging Face', 'LangChain', 'NumPy', 'Pandas'],
-  'Dev Tools':    ['Git', 'Docker', 'Linux', 'Vercel', 'AWS', 'CI/CD'],
+  Backend:        ['Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'Django', 'REST APIs'],
+  'AI / ML':      ['PyTorch', 'scikit-learn', 'Hugging Face', 'NumPy', 'Pandas'],
+  'Dev Tools':    ['Git', 'Docker', 'Vercel', 'AWS', 'CI/CD'],
 };
 
 // ── Resume — replace with your actual resume URL ───────────────────
@@ -53,7 +52,7 @@ export const AboutPage = () => {
 
             <div className="border-l-2 border-sienna pl-6 py-1">
               <p className="font-body text-ink/70 leading-relaxed italic">
-                I believe the best engineers are curious about everything — not just code, but design, people, and the world the software lives in.
+                i think it's easy for the software engineering community to forget that our culture stems from human experience. i ensure that every product i build has real impact.
               </p>
             </div>
 

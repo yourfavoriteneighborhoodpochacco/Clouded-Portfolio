@@ -1,21 +1,16 @@
 import type { SiteConfig } from '../types';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// FILL THIS IN — this is what every device/browser sees by default.
-// After editing, commit and redeploy to Vercel. Changes here show up everywhere.
-// (You can also override via the CMS Settings panel, but that's device-specific.)
-// ─────────────────────────────────────────────────────────────────────────────
 export const defaultConfig: SiteConfig = {
-  name: 'Your Name',                          // e.g. 'Jane Smith'
-  title: 'software engineering student',      // shows as typewriter on homepage
-  bio: 'I build things for the web and think deeply about how technology shapes the world. Currently studying computer science and always working on something new.',
-  location: 'Your City',                      // e.g. 'San Francisco, CA'
-  email: 'hello@yourname.com',
+  name: 'michael poniente',                          
+  title: 'computer engineering @ uci',      
+  bio: 'i build real stuff with real impact',
+  location: 'san francisco, ca',                      
+  email: 'michaelwrites.biz@gmail.com',
   links: {
-    github:    'https://github.com/yourhandle',
-    instagram: 'https://instagram.com/yourhandle',
-    linkedin:  'https://linkedin.com/in/yourhandle',
-    spotify:   'https://open.spotify.com/user/yourhandle',
+    github:    'https://github.com/yourfavoriteneighborhoodpochacco',
+    instagram: 'https://instagram.com/miichael__p',
+    linkedin:  'https://linkedin.com/in/michael-poniente',
+    spotify:   'https://open.spotify.com/user/0909ipwj9kk0qd81tvxufyg5t?si=a064aaf735b74b4e',
   },
-  footerQuote: 'Build things. Break things. Learn everything.',
+  footerQuote: 'You have to be delusional to dream big.',
 };

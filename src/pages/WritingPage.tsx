@@ -37,7 +37,7 @@ export const WritingPage = () => {
             Projects & work
           </h1>
           <p className="font-body text-ink/60 leading-relaxed max-w-lg">
-            A collection of projects, internships, and things I've built or contributed to. Spanning full-stack work, AI/ML experiments, and whatever's been keeping me up at night.
+            here's everything I've every solo-developed or contributed to. okay. maybe not everything, but most things.
           </p>
         </div>
 

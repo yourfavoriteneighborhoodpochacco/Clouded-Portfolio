@@ -163,12 +163,12 @@ export const HomePage = () => {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="font-display text-3xl md:text-4xl text-ink leading-snug italic">
-              Building things is how I think. Shipping things is how I learn.
+              A lot of things are happening in the world. Don't forget you are happening to the world too.
             </p>
           </div>
           <div className="flex flex-col gap-4">
             <p className="font-body text-sm text-ink/60 leading-relaxed">
-              I'm always working on something — open to internships, collaborations, and interesting problems. If you want to build something together, reach out.
+              so erm...recruiters. i'm actively seeking software engineering internships. and ummm... regular people. follow my journey as i fulfill my great prophecy (pursuing a software engineering career).
             </p>
             {config.email && (
               <a
