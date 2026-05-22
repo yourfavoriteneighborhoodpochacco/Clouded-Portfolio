@@ -4,7 +4,7 @@ export const defaultConfig: SiteConfig = {
   name: 'michael poniente',                          
   title: 'computer engineering @ uci',      
   bio: 'i build real stuff with real impact',
-  location: 'san francisco, ca',                      
+  location: 'bay area',                      
   email: 'michaelwrites.biz@gmail.com',
   links: {
     github:    'https://github.com/yourfavoriteneighborhoodpochacco',
