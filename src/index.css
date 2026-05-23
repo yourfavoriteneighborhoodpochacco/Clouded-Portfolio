@@ -80,7 +80,6 @@
   .delay-600 { animation-delay: 600ms; }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -98,7 +97,6 @@
   background: #C4622D;
 }
 
-/* Markdown prose styles */
 .prose-writing h1 { @apply font-display text-3xl text-ink mb-6 mt-8; }
 .prose-writing h2 { @apply font-display text-2xl text-ink mb-4 mt-8; }
 .prose-writing h3 { @apply font-display text-xl text-ink mb-3 mt-6; }

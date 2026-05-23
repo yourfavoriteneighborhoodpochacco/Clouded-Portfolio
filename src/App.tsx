@@ -10,7 +10,6 @@ import { AboutPage } from './pages/AboutPage';
 import { LoginPage } from './pages/LoginPage';
 import { AdminPage } from './pages/AdminPage';
 
-// Layout wrapper for public pages
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="grain-overlay">
     <Nav />
@@ -19,7 +18,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
-// Admin uses its own layout (no Footer/Nav)
 const AdminLayout = ({ children }: { children: React.ReactNode }) => (
   <div>{children}</div>
 );
@@ -30,17 +28,14 @@ export default function App() {
       <BrowserRouter>
         <CustomCursor />
         <Routes>
-          {/* Public */}
           <Route path="/" element={<Layout><HomePage /></Layout>} />
           <Route path="/writing" element={<Layout><WritingPage /></Layout>} />
           <Route path="/writing/:slug" element={<Layout><PostPage /></Layout>} />
           <Route path="/about" element={<Layout><AboutPage /></Layout>} />
 
-          {/* Auth / CMS */}
           <Route path="/login" element={<Layout><LoginPage /></Layout>} />
           <Route path="/admin" element={<AdminLayout><AdminPage /></AdminLayout>} />
 
-          {/* 404 */}
           <Route path="*" element={
             <Layout>
               <div className="min-h-screen flex flex-col items-center justify-center">

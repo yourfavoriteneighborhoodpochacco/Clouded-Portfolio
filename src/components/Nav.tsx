@@ -33,7 +33,7 @@ export const Nav = () => {
           {config.name}
         </Link>
 
-        {/* Desktop nav */}
+        {/* Desktop view */}
         <div className="hidden md:flex items-center gap-8">
           {links.map(({ to, label }) => (
             <Link

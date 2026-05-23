@@ -132,7 +132,6 @@ export const HomePage = () => {
         </section>
       )}
 
-      {/* More work list */}
       {recentPosts.length > 0 && (
         <section className="max-w-5xl mx-auto px-6 md:px-10 py-10 mb-10">
           <div className="flex items-center gap-4 mb-8">
@@ -158,7 +157,6 @@ export const HomePage = () => {
         </section>
       )}
 
-      {/* Bottom statement */}
       <section className="max-w-5xl mx-auto px-6 md:px-10 py-16 border-t border-dust/40">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>

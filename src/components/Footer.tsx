@@ -8,7 +8,6 @@ export const Footer = () => {
     <footer className="border-t border-dust/60 bg-paper/40 mt-24">
       <div className="max-w-5xl mx-auto px-6 md:px-10 py-16">
         <div className="grid md:grid-cols-3 gap-10 mb-12">
-          {/* Quote */}
           <div className="md:col-span-2">
             <p className="font-display text-xl md:text-2xl text-ink/70 italic leading-relaxed">
               "{config.footerQuote}"

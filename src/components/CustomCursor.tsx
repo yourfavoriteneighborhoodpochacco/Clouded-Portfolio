@@ -49,7 +49,6 @@ export const CustomCursor = () => {
 
   return (
     <>
-      {/* Main cursor dot */}
       <div
         className="fixed z-[99999] pointer-events-none rounded-full"
         style={{
@@ -60,7 +59,6 @@ export const CustomCursor = () => {
           transition: 'width 0.15s, height 0.15s, background 0.15s',
         }}
       />
-      {/* Trailing ring */}
       <div
         className="fixed z-[99998] pointer-events-none rounded-full border"
         style={{

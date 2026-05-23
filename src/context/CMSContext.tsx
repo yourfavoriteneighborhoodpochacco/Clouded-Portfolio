@@ -5,8 +5,6 @@ import { supabase } from '../lib/supabase';
 
 const AUTH_KEY = 'portfolio_auth';
 
-// Password comes from your .env file (VITE_CMS_PASSWORD) — never hardcoded.
-// Add it to Vercel under Settings → Environment Variables too.
 const CMS_PASSWORD = import.meta.env.VITE_CMS_PASSWORD as string | undefined;
 
 interface CMSContextType {
@@ -27,7 +25,6 @@ interface CMSContextType {
 
 const CMSContext = createContext<CMSContextType | null>(null);
 
-// Map Supabase row → WritingPost
 const rowToPost = (row: Record<string, unknown>): WritingPost => ({
   id:          String(row.id),
   title:       String(row.title),
@@ -41,7 +38,6 @@ const rowToPost = (row: Record<string, unknown>): WritingPost => ({
   readingTime: Number(row.reading_time ?? 1),
 });
 
-// Map WritingPost → Supabase insert/update shape
 const postToRow = (post: Omit<WritingPost, 'id'>) => ({
   title:        post.title,
   slug:         post.slug,
@@ -59,14 +55,12 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Config lives in defaultConfig.ts — edit that file and redeploy
   const [config] = useState<SiteConfig>(defaultConfig);
 
   const [isAuthenticated, setIsAuthenticated] = useState(() =>
     sessionStorage.getItem(AUTH_KEY) === 'true'
   );
 
-  // ── Load all posts from Supabase on mount ──────────────────────
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
@@ -86,7 +80,6 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
     fetchPosts();
 
-    // Real-time subscription — new/updated/deleted posts appear instantly
     const channel = supabase
       .channel('posts-changes')
       .on('postgres_changes', { event: '*', schema: 'public', table: 'posts' }, () => {
@@ -97,7 +90,6 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     return () => { supabase.removeChannel(channel); };
   }, []);
 
-  // ── Auth ───────────────────────────────────────────────────────
   const login = useCallback((password: string): boolean => {
     if (!CMS_PASSWORD) {
       console.error('VITE_CMS_PASSWORD is not set in your .env file.');
@@ -116,7 +108,6 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     sessionStorage.removeItem(AUTH_KEY);
   }, []);
 
-  // ── CRUD ───────────────────────────────────────────────────────
   const createPost = useCallback(async (postData: Omit<WritingPost, 'id'>): Promise<WritingPost | null> => {
     const { data, error: err } = await supabase
       .from('posts')
@@ -153,9 +144,7 @@ export const CMSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setPosts(prev => prev.filter(p => p.id !== id));
   }, []);
 
-  // Config updates are local-only (edit defaultConfig.ts + redeploy for permanent changes)
   const updateConfig = useCallback((_updates: Partial<SiteConfig>) => {
-    // no-op for now — config is hardcoded in defaultConfig.ts
   }, []);
 
   const getPost = useCallback((slug: string) => {

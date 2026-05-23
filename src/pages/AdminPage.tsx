@@ -170,7 +170,7 @@ const PostEditor = ({ post, onSave, onCancel }: EditorProps) => {
   );
 };
 
-// ── Settings Panel ───────────────────────────────────────────────────
+// Settings Panel
 const SettingsPanel = ({ onClose }: { onClose: () => void }) => (
   <div className="fixed inset-0 z-50 bg-ink/20 backdrop-blur-sm flex justify-end">
     <div className="w-full max-w-md bg-cream h-full overflow-y-auto shadow-xl">
@@ -211,7 +211,7 @@ const SettingsPanel = ({ onClose }: { onClose: () => void }) => (
   </div>
 );
 
-// ── Main Admin Dashboard ─────────────────────────────────────────────
+// Admin Dash
 export const AdminPage = () => {
   const { posts, isAuthenticated, loading, error, logout, createPost, updatePost, deletePost } = useCMS();
   const navigate = useNavigate();
@@ -227,7 +227,7 @@ export const AdminPage = () => {
 
   if (!isAuthenticated) return null;
 
-  // ── Editor ──────────────────────────────────────────────────────
+  // Editor 
   if (view === 'new' || view === 'edit') {
     return (
       <>
@@ -246,7 +246,7 @@ export const AdminPage = () => {
     );
   }
 
-  // ── Dashboard ────────────────────────────────────────────────────
+  // Dashboard 
   const filtered = posts
     .filter(p => !search || p.title.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
@@ -278,7 +278,6 @@ export const AdminPage = () => {
         </div>
 
         <div className="max-w-5xl mx-auto px-6 md:px-10 py-10">
-          {/* Error banner */}
           {error && (
             <div className="flex items-center gap-3 bg-sienna/10 border border-sienna/30 rounded-sm px-4 py-3 mb-6">
               <AlertCircle size={14} className="text-sienna flex-shrink-0" />
@@ -300,7 +299,6 @@ export const AdminPage = () => {
             ))}
           </div>
 
-          {/* Header + search */}
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
               <h2 className="font-display text-xl text-ink">All Posts</h2>
@@ -314,7 +312,6 @@ export const AdminPage = () => {
             </button>
           </div>
 
-          {/* Posts table */}
           {loading && posts.length === 0 ? (
             <div className="py-20 text-center">
               <Loader2 size={20} className="animate-spin text-ink/20 mx-auto mb-3" />

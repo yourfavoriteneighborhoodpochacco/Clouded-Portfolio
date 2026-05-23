@@ -23,7 +23,6 @@ export const PostPage = () => {
 
   const date = format(new Date(post.publishedAt), 'MMMM d, yyyy');
 
-  // Get adjacent posts
   const idx = publishedPosts.findIndex(p => p.id === post.id);
   const prev = publishedPosts[idx + 1];
   const next = publishedPosts[idx - 1];
@@ -31,7 +30,6 @@ export const PostPage = () => {
   return (
     <div className="min-h-screen pt-24 pb-20">
       <div className="max-w-2xl mx-auto px-6 md:px-10">
-        {/* Back nav */}
         <button
           onClick={() => navigate(-1)}
           className="group inline-flex items-center gap-2 font-mono text-xs text-ink/40 hover:text-sienna transition-colors duration-200 mb-12"
@@ -40,7 +38,7 @@ export const PostPage = () => {
           back
         </button>
 
-        {/* Post header */}
+        {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-5">
             <span className="font-mono text-xs text-sienna/80 uppercase tracking-widest">{post.category}</span>
@@ -70,7 +68,7 @@ export const PostPage = () => {
           )}
         </header>
 
-        {/* Divider */}
+        {/* Div */}
         <div className="flex items-center gap-4 mb-12">
           <div className="flex-1 h-px bg-dust/60" />
           <div className="w-1 h-1 rounded-full bg-sienna" />
@@ -93,7 +91,7 @@ export const PostPage = () => {
           </div>
         </div>
 
-        {/* Adjacent navigation */}
+        {/* Nav */}
         {(prev || next) && (
           <div className="grid grid-cols-2 gap-8 border-t border-dust/40 pt-10">
             {prev ? (

@@ -37,7 +37,7 @@ export const AboutPage = () => {
           </h1>
         </div>
 
-        {/* Bio + Info grid */}
+        {/* Bio + Info */}
         <div className="grid md:grid-cols-5 gap-12 md:gap-16 mb-16">
           {/* Bio column */}
           <div className="md:col-span-3 space-y-6">
@@ -115,7 +115,7 @@ export const AboutPage = () => {
           </div>
         </div>
 
-        {/* ── Skills ─────────────────────────────────────────────── */}
+        {/* Skills */}
         <div className="border-t border-dust/40 pt-12 mb-16">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px bg-sienna" />
@@ -141,7 +141,7 @@ export const AboutPage = () => {
           </div>
         </div>
 
-        {/* ── Resume ─────────────────────────────────────────────── */}
+        {/* Resume */}
         <div className="border-t border-dust/40 pt-12 mb-16">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
@@ -167,14 +167,13 @@ export const AboutPage = () => {
               className="w-full h-full"
               title="Resume"
             />
-            {/* Fallback if PDF doesn't load */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100">
               <FileText size={32} className="text-ink/20 mb-3" />
             </div>
           </div>
         </div>
 
-        {/* ── Currently Reading ───────────────────────────────────── */}
+        {/* Recs */}
         <div className="border-t border-dust/40 pt-12">
           <div className="flex items-center gap-4 mb-8">
             <div className="w-8 h-px bg-dust" />
