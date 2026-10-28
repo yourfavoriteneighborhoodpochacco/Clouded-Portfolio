@@ -10,7 +10,7 @@ const SKILLS = {
   'Dev Tools':    ['Git', 'Docker', 'Vercel', 'AWS', 'CI/CD'],
 };
 
-const RESUME_URL = 'https://drive.google.com/file/d/1npx9e59oGqEffPnuhHeU_qWxEeMbMDIM/preview';
+const RESUME_URL = 'https://drive.google.com/file/d/1Mw-C9XSWWk6quxGLaZbn9ldF004zsQAk/view?usp=sharing';
 
 const TV_SERIES = [
   { title: 'In Your Radiant Season', author: 'K-DRAMA' },
