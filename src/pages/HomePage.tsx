@@ -166,7 +166,7 @@ export const HomePage = () => {
           </div>
           <div className="flex flex-col gap-4">
             <p className="font-body text-sm text-ink/60 leading-relaxed">
-              so erm...recruiters. i'm actively seeking software engineering internships. and ummm... regular people. follow my journey as i fulfill my great prophecy (pursuing a software engineering career).
+              hi recruiters. i'm actively seeking software engineering internships. regular people... follow my journey as i fulfill my great prophecy (pursuing a software engineering career).
             </p>
             {config.email && (
               <a

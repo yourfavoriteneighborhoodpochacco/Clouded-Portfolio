@@ -3,19 +3,18 @@ import { useCMS } from '../context/CMSContext';
 import { FileText, ExternalLink } from 'lucide-react';
 
 const SKILLS = {
-  Languages:      ['Python', 'TypeScript', 'SQL'],
-  Frontend:       ['React', 'Next.js', 'TailwindCSS', 'HTML/CSS', 'Vite', 'Figma'],
-  Backend:        ['Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'Django', 'REST APIs'],
-  'AI / ML':      ['PyTorch', 'scikit-learn', 'Hugging Face', 'NumPy', 'Pandas'],
-  'Dev Tools':    ['Git', 'Docker', 'Vercel', 'AWS', 'CI/CD'],
+  Languages: ['TypeScript', 'Python', 'SQL', 'CSS'],
+  Frameworks: ['React', 'Next.js', 'FastAPI', 'Django', 'PyTorch', 'Node.js', 'Express.js', 'TailwindCSS'],
+  Libraries: ['NumPy', 'Pandas', 'SciPy', 'Scikit-learn', 'OpenCV', 'MediaPipe'],
+  'Developer Tools': ['Git', 'GitHub', 'CI/CD', 'VS Code', 'PyCharm', 'Railway', 'Vercel'],
 };
 
 const RESUME_URL = 'https://drive.google.com/file/d/1Mw-C9XSWWk6quxGLaZbn9ldF004zsQAk/preview';
 
 const TV_SERIES = [
-  { title: 'In Your Radiant Season', author: 'K-DRAMA' },
+  { title: 'A Love Other Than Yours', author: 'C-DRAMA' },
   { title: 'Best Thing', author: 'C-DRAMA' },
-  { title: 'Perfect Crown', author: 'K-DRAMA' },
+  { title: 'Pursuit of Jade', author: 'C-DRAMA' },
 ];
 
 export const AboutPage = () => {
@@ -90,12 +89,6 @@ export const AboutPage = () => {
                   <a href={config.links.linkedin} target="_blank" rel="noreferrer"
                     className="block font-body text-sm text-ink/70 hover:text-sienna transition-colors duration-200 hover-underline">
                     LinkedIn →
-                  </a>
-                )}
-                {config.links.instagram && (
-                  <a href={config.links.instagram} target="_blank" rel="noreferrer"
-                    className="block font-body text-sm text-ink/70 hover:text-sienna transition-colors duration-200 hover-underline">
-                    Instagram →
                   </a>
                 )}
                 {config.links.spotify && (

@@ -27,11 +27,6 @@ export const Footer = () => {
                 github
               </a>
             )}
-            {config.links.instagram && (
-              <a href={config.links.instagram} target="_blank" rel="noreferrer" className="font-body text-sm text-ink/70 hover:text-sienna transition-colors hover-underline">
-                instagram
-              </a>
-            )}
             {config.links.linkedin && (
               <a href={config.links.linkedin} target="_blank" rel="noreferrer" className="font-body text-sm text-ink/70 hover:text-sienna transition-colors hover-underline">
                 linkedin
